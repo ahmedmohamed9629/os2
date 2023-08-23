@@ -20,7 +20,7 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USERNAME}}/myimage .
 
       - name: "Pusing Docker image"
-        run: docker push ${{ secrets.DOCKER_TOKEN}}/myimage 
+        run: docker push ${{ secrets.DOCKER_USERNAME}}/myimage 
 
       
         
