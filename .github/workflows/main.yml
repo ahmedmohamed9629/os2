@@ -10,13 +10,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: 'Before'
-        run: ls
-      
+    steps: 
       - uses: actions/checkout@v3
 
-      - name: 'After'
-        run: ls
+      - name: "Login to Docker hup"
+        run: docker login --username awd896541 --password dckr_pat_XzSlG8FJwtOTPpOsrzvhQ78GM40
       
         
