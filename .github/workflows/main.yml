@@ -10,10 +10,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
-      - uses: actions/checkout@v3
 
-      - name: "Login to Docker hup"
-        run: docker login --username awd896541 --password dckr_pat_XzSlG8FJwtOTPpOsrzvhQ78GM40
-      
-        
+      steps:
+        - uses: actions/checkout@v3
+
+        - name: "Login to Docker hub"
+          run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
+
+
+          
